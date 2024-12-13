@@ -38,11 +38,8 @@ function sortArrayDescending(numbers) {
 
 // Function 6: Lowercase first letter
 function lowercaseFirstLetter(string) {
-    let reversed = '';
-    for (let i = string.length - 1; i >= 0; i--) {
-        reversed += string[i];
-    }
-    return reversed;
+    if (string === "") return ""; // Handle empty string
+    return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
 // Function 7: Find average
@@ -64,12 +61,12 @@ function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
 
-// All functions
-console.log(calculateDifference(10, 5));
-console.log(isOdd(3));
+// Functions calling
+console.log(calculateDifference(-10, -20));
+console.log(isOdd(-25));
 console.log(findMin([5, 2, 9, 1, 56, 34, -12, 34, -67, 89, -45, 90]));
 console.log(filterEvenNumbers([1, 2, 3, 4, 6, 12, 23, 43, 54, 65]));
 console.log(sortArrayDescending([34, 51, 22, 39, 83, 76]));
 console.log(lowercaseFirstLetter("Rezwan"));
 console.log(findAverage([4, 8, 34, 23, 67, 49]));
-console.log(isLeapYear(2024));
+console.log(isLeapYear(2023));
